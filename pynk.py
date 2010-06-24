@@ -116,7 +116,7 @@ class PyNK:
 	  try: #wychrzania sie jesli posty=0 (http://tnij.org/g0un)
 	    ret.append(NK_forum_thread(
 	    title = thread[0].text_content(),
-	    url = thread[0][1][0].items()[0][1],
+	    url = thread[0][1][0].items()[0][1][1:],
 	    started_author = thread[1][0].text_content(),
 	    started_time = thread[1][1].text_content(),
 	    posts_count = int(thread[2].text_content()),
